@@ -27,7 +27,7 @@ pipeline {
                 sleep(10)
                 timeout(time: 1, unit: 'MINUTES') {
                     sh 'echo JSON Workaround 2'
-                    waitForQualityGate() abortPipeline: true
+                    waitForQualityGates
                     sh 'echo JSON Workaround 3'
                 }
             }
