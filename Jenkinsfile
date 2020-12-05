@@ -21,15 +21,15 @@ pipeline {
                 }
             }
         }
-        stage ('Quality Gate') {
-            steps {
-                sh 'echo JSON Workaround'
-                sleep(10)
-                timeout(time: 1, unit: 'MINUTES') {
-                    waitForQualityGate abortPipeline: true
-                }
-            }
-        }
+        // stage ('Quality Gate') {
+        //     steps {
+        //         sh 'echo JSON Workaround'
+        //         sleep(10)
+        //         timeout(time: 1, unit: 'MINUTES') {
+        //             waitForQualityGate abortPipeline: true
+        //         }
+        //     }
+        // }
     }
 }
 
