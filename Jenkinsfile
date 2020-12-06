@@ -29,7 +29,7 @@ pipeline {
                 }
             }
         }
-        stages ('Deploy Backend') {
+        stage ('Deploy Backend') {
             steps {
                 deploy adapters: [tomcat8(credentialsId: 'TomcatLogin', path: '', url: '/tasks-backend')], contextPath: '/tasks-backend', war: 'target/surefire-reports/*.xml'
             }
