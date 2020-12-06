@@ -23,7 +23,7 @@ pipeline {
         }
         stage ('Quality Gate') {
             steps {
-                sh 'Quality Gate'
+                sh 'echo Quality Gate'
                 // sleep(10)
                 // timeout(time: 2, unit: 'MINUTES') {
                 //     sh 'echo JSON Workaround 2'
